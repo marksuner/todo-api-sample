@@ -1,0 +1,20 @@
+{
+  "name": "todoist-api-sample",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node ./bootstrap/app.js",
+    "dev-start": "nodemon ./bootstrap/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mark Jestoni Suner",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
