@@ -1,6 +1,6 @@
 module.exports = {
     index(req, res) {
-
+        res.send('Hello Todos!')
     },
 
     show(req, res) {

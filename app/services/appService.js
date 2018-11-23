@@ -13,6 +13,9 @@ const appService = {
      */
     serve() {
 
+        // set the middlewares
+        routeService.middleware(this.app)
+
         // set the routes from the route service
         routeService.serve(this.app)
 

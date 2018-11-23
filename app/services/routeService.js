@@ -12,12 +12,24 @@ const routeService = {
     ],
 
     /**
+     * set middleware
+     * @param  {[type]} app [description]
+     * @return {[type]}     [description]
+     */
+    middleware(app) {
+        app.use((req, res, next) => {
+            res.header('Content-Type', 'application/json');
+            next();
+        });
+    },
+
+    /**
      * serve all module routes
      * @param  {[Express]} app
      * @return {[void]}
      */
     serve(app) {
-        this.routes.forEach( ({group, router}) => {
+        this.routes.forEach( ({group, router, middleware}) => {
             app.use(group, router());
         })
     },
