@@ -4,7 +4,7 @@ an API using nodejs and express as the platform
 
 ## TODO
 
-[ ] Database (mongodb OR )
-[ ] Specific Middleware
-[ ] Remake of Global Middleware from the `Route Service`
-[ ] Socket.Io (web socket)
+- [ ] Database (mongodb OR )
+- [ ] Specific Middleware
+- [ ] Remake of Global Middleware from the `Route Service`
+- [ ] Socket.Io (web socket)
