@@ -13,7 +13,13 @@ const route = {
 
     router: () => {
         /* GET index listing. */
-        router.get('/', (req, res) => res.send('Hello Index!'))
+        router.get('/', (req, res) => 
+            res.send({
+                success: true,
+                data: [],
+                message: 'Successfully get /'
+            })
+        )
 
         return router
     }

@@ -6,15 +6,16 @@
  * }
  */
 
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const controller = require('./controller')
+const router = express.Router()
 
 const route = {
     group: '/users',
 
     router() {
         /* GET index listing. */
-        router.get('/', (req, res) => res.send('Hello Users!'))
+        router.get('/', (req, res) => controller.index(req, res))
 
         return router
     }

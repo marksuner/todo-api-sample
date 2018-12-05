@@ -1,6 +1,9 @@
 module.exports = {
     index(req, res) {
-        res.send('Hello Todos!')
+        res.send({
+            success: true,
+            data: []
+        })
     },
 
     show(req, res) {

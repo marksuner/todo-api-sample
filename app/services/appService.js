@@ -1,6 +1,7 @@
 const express = require('express')
 const appConfig = require('../config/app')
 const routeService = require('./routeService')
+const mongoService = require('./mongoService')
 
 const appService = {
     app: express(),
@@ -18,6 +19,13 @@ const appService = {
 
         // set the routes from the route service
         routeService.serve(this.app)
+
+        // set mongo db
+        mongoService
+            .connect()
+            .open( () => {
+                console.log('mongodb opened')
+            })
 
         // set the server
         let server = this.app.listen(appConfig.port, () => {
