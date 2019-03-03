@@ -1,7 +1,9 @@
+const Todo = require('./model');
+
 module.exports = {
   index(req, res) {
     res.send({
-      success: true,
+      success: false,
       data: []
     })
   },
