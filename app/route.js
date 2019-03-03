@@ -6,23 +6,23 @@
  * }
  */
 
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 const route = {
-    group: '/',
+  group: '/',
 
-    router: () => {
-        /* GET index listing. */
-        router.get('/', (req, res) => 
-            res.send({
-                success: true,
-                data: [],
-                message: 'Successfully get /'
-            })
-        )
+  router: () => {
+    /* GET index listing. */
+    router.get('/', (req, res) =>
+      res.send({
+        success: true,
+        data: [],
+        message: 'Successfully get /'
+      })
+    )
 
-        return router
-    }
+    return router
+  }
 }
 
 module.exports = route

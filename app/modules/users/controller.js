@@ -1,24 +1,24 @@
 module.exports = {
-    index(req, res) {
-        res.send({
-            success: true,
-            data: []
-        })
-    },
+  index(req, res) {
+    res.send({
+      success: true,
+      data: []
+    })
+  },
 
-    show(req, res) {
+  show(req, res) {
 
-    },
+  },
 
-    edit(req, res) {
+  edit(req, res) {
 
-    },
+  },
 
-    update(req, res) {
+  update(req, res) {
 
-    },
+  },
 
-    delete(req, res) {
+  delete(req, res) {
 
-    }
+  }
 }

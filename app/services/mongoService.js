@@ -2,34 +2,34 @@ const mongoose = require('mongoose')
 const mongoConfig = require('../config/mongo')
 
 const mongoService = {
-    
-    db: null,
+  db: null,
 
-    setDB(db) {
-        this.db = db
-    },
+  setDB(db) {
+    this.db = db
+  },
 
-    getDB() {
-        return this.db
-    },
+  getDB() {
+    return this.db
+  },
 
-    connect() {
-        mongoose.connect(mongoConfig.host)
+  connect() {
+    mongoose.connect(mongoConfig.host, {
+      useNewUrlParser: true
+    })
 
-        this.setDB(mongoose.connection)
+    this.setDB(mongoose.connection)
 
-        return this
-    },
+    return this
+  },
 
-    open( callback ) {
-        this.db.once('open', () => {
-          // we're connected!
-          if (typeof callback === 'function') {
-            callback()
-          }
-        })
-    }
+  open(callback) {
+    this.db.once('open', () => {
+      // we're connected!
+      if (typeof callback === 'function') {
+        callback()
+      }
+    })
+  }
 }
-
 
 module.exports = mongoService

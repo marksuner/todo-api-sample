@@ -11,14 +11,14 @@ const controller = require('./controller')
 const router = express.Router()
 
 const route = {
-    group: '/users',
+  group: 'users',
 
-    router() {
-        /* GET index listing. */
-        router.get('/', (req, res) => controller.index(req, res))
+  router() {
+    /* GET index listing. */
+    router.get('/', (req, res) => controller.index(req, res))
 
-        return router
-    }
+    return router
+  }
 }
 
 module.exports = route
